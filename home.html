@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="icon" href="image/logo.png">
+	<title>
+		Bootstrap Demo Website
+	</title>
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/default.css" rel="stylesheet">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="js/bootstrap.js" type = "text/javascript" ></script>
+</head>
+<body>
+<div class="container-fluid">
+	<nav class="navbar navbar-default">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarcollapse">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <img class="navbar-brand" alt="Brand" src="image/logo.png" >
+          </div>
+        <div id="navbarcollapse" class="navbar-collapse collapse ">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
+              <li class="dropdown">
+				<a href="#" class="dropdown-toggle" data-toggle="dropdown">Technology <span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="#">HTML 5</a></li>
+						<li><a href="#">CSS 3</a></li>
+						<li><a href="#">Bootstrap 3</a></li>
+					</ul>
+			  </li>
+			</ul>
+			<form class="navbar-form navbar-right">
+				<div class="form-group">
+				  <input type="text" class="form-control" placeholder="Search">
+				</div>
+				<button type="submit" class="btn btn-default">Submit</button>
+			</form>
+			<button type="button" class="btn btn-default navbar-btn navbar-right">Login</button>
+		</div>	
+	</nav>
+</div>
+
+<section class="slider">
+	<div class="carousel slide" id="updates">
+		<ol class="carousel-indicators">
+			<li class="active" data-target="#updates" data-slide-to="0"></li>
+			<li class="active" data-target="#updates" data-slide-to="1"></li>
+			<li class="active" data-target="#updates" data-slide-to="2"></li>
+		</ol>
+		
+		<div class="container-fluid">
+		<div class="carousel-inner " >
+			<div class="active item">
+				<img class="img-responsive img-rounded" src="image/values.jpg" style="width:100%;height:500px;">
+				<div class="carousel-caption" alt="Technology">
+					Our Values
+				</div>
+			</div>
+			<div class="item">
+				<img class="img-responsive img-rounded" src="image/ambiance.jpeg" style="width:100%;height:500px;">
+				<div class="carousel-caption" alt="Technology">
+					How we work
+				</div>
+			</div>
+			<div class="item">
+				<img class="img-responsive img-rounded" src="image/technology.jpg" style="width:100%;height:500px;">
+				<div class="carousel-caption" alt="Technology">
+					Things You will learn here
+				</div>
+			</div>
+		</div>
+		
+		<a class="left carousel-control" href="#updates" data-slide="prev">
+			<span class="glyphicon glyphicon-chevron-left"></span>
+		</a>
+		<a class="right carousel-control" href="#updates" data-slide="next">
+			<span class="glyphicon glyphicon-chevron-right"></span>
+		</a>
+	</div>
+	</div>
+</section>
+
+<section class="details">
+	<div class="container-fluid">
+		<div class="row bg-success">
+			<h1 class="text-uppercase"> Our Wide Range of services</h1>
+		</div>
+		<div class="row">
+			<div class="col-md-4">
+				<img class="img-circle" src="image/web.png" width="140" height="140">
+				<h2>Web</h2>
+				<p>
+					A business without an online presence is like a computer without internet. 
+					Go global. Make your presence felt. Be the spider in this magnificent world of web.
+				</p>
+				<p>
+					<a  class="btn btn-default" href="https://techterms.com/definition/web_design" >Read More
+					<span class="glyphicon glyphicon-chevron-right"></a>
+				</p>
+			</div>
+			<div class="col-md-4">
+				<img class="img-circle" src="image/mobile.png" width="140" height="140">
+				<h2>Mobile</h2>
+				<p>
+					The world is getting smarter and better connected by the day. 
+					So should your business. Recharge your business and reach your customers on the go, anytime, anywhere.
+				</p>
+				<p>
+					<a  class="btn btn-default" href="https://study.com/articles/Web_Designer_Job_Description_Duties_and_Requirements.html" >Read More
+					<span class="glyphicon glyphicon-chevron-right"></a>
+				</p>
+			</div>
+			<div class="col-md-4">
+				<img class="img-circle" src="image/cloud.jpg" width="140" height="140">
+				<h2>Cloud</h2>
+				<p>
+					Expand your footprint and aim for the sky. Harness the power of virtual clouds to rejuvenate your business with 
+					flexibility, scalability, security, reliability, stability.It’s a classical technology.
+				</p>
+				<p>
+					<a  class="btn btn-default" href="https://www.mockplus.com/blog/post/web-designer-vs-web-developer" >Read More
+					<span class="glyphicon glyphicon-chevron-right"></a>
+				</p>
+			</div>
+		</div>	
+	</div>
+</section>
+
+<section class="information">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="container-fluid">
+				<h2> Happy Customers <span class="glyphicon glyphicon-heart"></span></h2>
+				<div class="carousel slide" id="cusotmerReview">
+					<ol class="carousel-indicators">
+						<li class="active" data-target="#cusotmerReview" data-slide-to="0"></li>
+						<li data-target="#cusotmerReview" data-slide-to="1"></li>
+						<li data-target="#cusotmerReview" data-slide-to="2"></li>
+					</ol>
+					
+					<div class="carousel-inner">
+						<div class="item active">
+							<div class="container">
+								<img alt="Brad Pace" class="img-circle" src="https://www.iprogrammer.com/wp-content/uploads/2014/03/happy-clients-03.jpg" height="80" width="80">
+								<div>Avea has been a critical part of our business.&nbsp; I have worked with them for almost 4 years now with 3 different companies.&nbsp; 
+								I have worked with many development companies over the years but Avea is the best of the best.</div>	
+								<div class="h3">Brad Pace, <strong>Director, Development</strong></div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="container">
+								<img alt="Nathan Gwilliam" class="img-circle" src="https://www.iprogrammer.com/wp-content/uploads/2014/12/nathan_2.jpg" height="80" width="80">
+								<div>I have worked with Avea for several years at three different US companies. At my current company, Elevati, we have 17 full-time team members 
+								who do PHP development, mobile development, user interface development, quality assurance testing, search engine optimization, systems administration and project management…</div>	
+								<div class="h3">Nathan Gwilliam,  <strong>President &amp; CEO</strong></div>
+							</div>
+						</div>
+						<div class="item">
+							<div class="container">
+								<img alt="Rosa Fearria" class="img-circle" src="https://www.iprogrammer.com/wp-content/uploads/2014/12/Rosa.jpg" height="80" width="80">
+								<div>Avea has been instrumental in the development of our site and they still work closely with us on a daily basis as we grow and our needs become more complex. 
+								The developers work with us in an agile way and we have found everyone to be friendly, professional and technically proficient.
+								We would not hesitate to recommend them if asked.</div>	
+								<div class="h3">Rosa Fearria,   <strong>Director</strong></div>
+							</div>
+						</div>
+					</div>
+					
+					<a class="left carousel-control" href="#cusotmerReview" data-slide="prev">
+						<span class="glyphicon glyphicon-chevron-left"></span>
+					</a>
+					
+					<a class="right carousel-control" href="#cusotmerReview" data-slide="next">
+						<span class="glyphicon glyphicon-chevron-right"></span>
+					</a>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<section class="progresssection">
+	<div class="container-fluid">
+		<div class="h2"> Developer Survey Results 2017 <span class="glyphicon glyphicon-tasks"></span></div>
+		<div class="panel panel-default">
+		  <div class="panel-body">
+			<span><strong>Stackoverflow:</strong> </span>In year 2017, over 64,000 developers told us how they learn and level up, which tools they’re using, 
+			and what they want.
+			<a href="https://insights.stackoverflow.com/survey/2017#most-popular-technologies"> <em>Learn more </em> </a>
+		  </div>
+		</div>
+	</div>
+	<div class="col-md-6">
+		<div class="h3"> Developers Roles </div>
+		<div> Web developer 72.6% </div>
+		<div class="progress">
+			<div class="progress-bar progress-bar-primary progress-bar-striped " style="width:72.6%;color:black;"></div>
+		</div>
+		<div> Desktop applications developer 28.9%  </div>
+		<div class="progress">
+			<div class="progress-bar progress-bar-primary progress-bar-striped " style="width:28.9%;color:black;"></div>
+		</div>
+		<div> Mobile developer 23.0%  </div>
+		<div class="progress">
+			<div class="progress-bar progress-bar-primary progress-bar-striped " style="width:23.0%;color:black;"></div>
+		</div>
+		<div> Database administrator 14.4% </div>
+		<div class="progress">
+			<div class="progress-bar progress-bar-primary progress-bar-striped " style="width:14.4%;color:black;"> </div>
+		</div>
+	</div>
+	<div class="col-md-6">
+		<div class="h3"> Programming Languages </div>
+		<div> JavaScript 62.5% </div>
+		<div class="progress">
+			<div class="progress-bar progress-bar-info progress-bar-striped " style="width:62.5%;color:black;"></div>
+		</div>
+		<div> SQL 51.2% </div>
+		<div class="progress">
+			<div class="progress-bar progress-bar-info progress-bar-striped " style="width:51.2%;color:black;"></div>
+		</div>
+		<div> Java 39.7%  </div>
+		<div class="progress">
+			<div class="progress-bar progress-bar-info progress-bar-striped " style="width:39.7%;color:black;"></div>
+		</div>
+		<div> Python 32.0% </div>
+		<div class="progress">
+			<div class="progress-bar progress-bar-info progress-bar-striped " style="width:32%;color:black;"> </div>
+		</div>
+	</div>
+</section>
+
+<footer class="footer">
+      <div class="container">
+        <p class="text-muted">Copyright &copy 2019</p>
+      </div>
+</footer>
+</body>
+
+</html>
