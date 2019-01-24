@@ -11,9 +11,10 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="js/bootstrap.js" type = "text/javascript" ></script>
 </head>
-<body>
+<body id="home">
 <div class="container-fluid">
-	<nav class="navbar navbar-default">
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container-fluid">
           <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarcollapse">
               <span class="sr-only">Toggle navigation</span>
@@ -25,9 +26,10 @@
           </div>
         <div id="navbarcollapse" class="navbar-collapse collapse ">
             <ul class="nav navbar-nav">
-              <li class="active"><a href="#">Home</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Contact</a></li>
+              <li class="active"><a href="#home">Home</a></li>
+              <li><a href="#services">Services</a></li>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#contatus">Contact</a></li>
               <li class="dropdown">
 				<a href="#" class="dropdown-toggle" data-toggle="dropdown">Technology <span class="caret"></span></a>
 					<ul class="dropdown-menu">
@@ -43,10 +45,41 @@
 				</div>
 				<button type="submit" class="btn btn-default">Submit</button>
 			</form>
-			<button type="button" class="btn btn-default navbar-btn navbar-right">Login</button>
+			<button type="button" class="btn btn-default navbar-btn navbar-right" data-toggle="modal" data-target="#myModal" >Login</button>
 		</div>	
+	</div>
 	</nav>
+	
+	<script>
+		$(".nav a").on("click",function(){
+			$(".nav").find(".active").removeClass("active");
+			$(this).parent().addClass("active");
+		});
+	</script>
 </div>
+
+<section class="login">
+	<div class="modal fade" id="myModal">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal"> <span aria-hidden="true">&times;</span> </button>
+					<h4 class="modal-title"> Login </h4>
+				</div>
+				<div class="modal-body">
+					<div class="form-group input-group">
+						<input type="email" id="user" class="form-control" placeholder="Username">
+						<input type="password" id="password" class="form-control" placeholder="Password">
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">Close</button> 
+					<button type="button" class="btn btn-primary" >Login</button> 
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
 
 <section class="slider">
 	<div class="carousel slide" id="updates">
@@ -88,9 +121,9 @@
 	</div>
 </section>
 
-<section class="details">
-	<div class="container-fluid">
-		<div class="row bg-success">
+<section class="details" >
+	<div class="container-fluid" id="services">
+		<div class="row" style="background-color:#0cd8ab;">
 			<h1 class="text-uppercase"> Our Wide Range of services</h1>
 		</div>
 		<div class="row">
@@ -103,7 +136,7 @@
 				</p>
 				<p>
 					<a  class="btn btn-default" href="https://techterms.com/definition/web_design" >Read More
-					<span class="glyphicon glyphicon-chevron-right"></a>
+					<span class="glyphicon glyphicon-chevron-right"></span></a>
 				</p>
 			</div>
 			<div class="col-md-4">
@@ -115,7 +148,7 @@
 				</p>
 				<p>
 					<a  class="btn btn-default" href="https://study.com/articles/Web_Designer_Job_Description_Duties_and_Requirements.html" >Read More
-					<span class="glyphicon glyphicon-chevron-right"></a>
+					<span class="glyphicon glyphicon-chevron-right"></span></a>
 				</p>
 			</div>
 			<div class="col-md-4">
@@ -127,14 +160,14 @@
 				</p>
 				<p>
 					<a  class="btn btn-default" href="https://www.mockplus.com/blog/post/web-designer-vs-web-developer" >Read More
-					<span class="glyphicon glyphicon-chevron-right"></a>
+					<span class="glyphicon glyphicon-chevron-right"></span></a>
 				</p>
 			</div>
 		</div>	
 	</div>
 </section>
 
-<section class="information">
+<section class="userinformation">
 	<div class="container-fluid">
 		<div class="row">
 			<div class="container-fluid">
@@ -150,15 +183,15 @@
 						<div class="item active">
 							<div class="container">
 								<img alt="Brad Pace" class="img-circle" src="https://www.iprogrammer.com/wp-content/uploads/2014/03/happy-clients-03.jpg" height="80" width="80">
-								<div>Avea has been a critical part of our business.&nbsp; I have worked with them for almost 4 years now with 3 different companies.&nbsp; 
-								I have worked with many development companies over the years but Avea is the best of the best.</div>	
+								<div>sample has been a critical part of our business.&nbsp; I have worked with them for almost 4 years now with 3 different companies.&nbsp; 
+								I have worked with many development companies over the years but sample is the best of the best.</div>	
 								<div class="h3">Brad Pace, <strong>Director, Development</strong></div>
 							</div>
 						</div>
 						<div class="item">
 							<div class="container">
 								<img alt="Nathan Gwilliam" class="img-circle" src="https://www.iprogrammer.com/wp-content/uploads/2014/12/nathan_2.jpg" height="80" width="80">
-								<div>I have worked with Avea for several years at three different US companies. At my current company, Elevati, we have 17 full-time team members 
+								<div>I have worked with sample for several years at three different US companies. At my current company, Elevati, we have 17 full-time team members 
 								who do PHP development, mobile development, user interface development, quality assurance testing, search engine optimization, systems administration and project management…</div>	
 								<div class="h3">Nathan Gwilliam,  <strong>President &amp; CEO</strong></div>
 							</div>
@@ -166,7 +199,7 @@
 						<div class="item">
 							<div class="container">
 								<img alt="Rosa Fearria" class="img-circle" src="https://www.iprogrammer.com/wp-content/uploads/2014/12/Rosa.jpg" height="80" width="80">
-								<div>Avea has been instrumental in the development of our site and they still work closely with us on a daily basis as we grow and our needs become more complex. 
+								<div>sample has been instrumental in the development of our site and they still work closely with us on a daily basis as we grow and our needs become more complex. 
 								The developers work with us in an agile way and we have found everyone to be friendly, professional and technically proficient.
 								We would not hesitate to recommend them if asked.</div>	
 								<div class="h3">Rosa Fearria,   <strong>Director</strong></div>
@@ -188,61 +221,102 @@
 	</div>
 </section>
 
-<section class="progresssection">
-	<div class="container-fluid">
-		<div class="h2"> Developer Survey Results 2017 <span class="glyphicon glyphicon-tasks"></span></div>
-		<div class="panel panel-default">
-		  <div class="panel-body">
-			<span><strong>Stackoverflow:</strong> </span>In year 2017, over 64,000 developers told us how they learn and level up, which tools they’re using, 
-			and what they want.
-			<a href="https://insights.stackoverflow.com/survey/2017#most-popular-technologies"> <em>Learn more </em> </a>
-		  </div>
-		</div>
+<section class="about" id="about">
+	<div class="container-fluid" >
+		<h2 class="text-uppercase"> About</h2>
+		<h3 class="text-muted"><em>We develop to live</em></h3>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-6">
+					<img src="image/about-us.jpg" class="img-thumbnail">
+				</div>
+				<div class="col-md-6">
+			Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+			when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap 
+			into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing 
+			Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+				</div>
+			</div>
+		</div>	
 	</div>
-	<div class="col-md-6">
-		<div class="h3"> Developers Roles </div>
-		<div> Web developer 72.6% </div>
-		<div class="progress">
-			<div class="progress-bar progress-bar-primary progress-bar-striped " style="width:72.6%;color:black;"></div>
+</section>
+
+<section class="survey" id="survey">
+	<div  class="container-fluid" style="margin-top:20px;"> 
+		<div>
+			<div class="h2"> Developer Survey Results 2017 <span class="glyphicon glyphicon-tasks"></span></div>
+			<div class="panel panel-default">
+			  <div class="panel-body">
+				<span><strong>Stackoverflow:</strong> </span>In year 2017, over 64,000 developers told us how they learn and level up, which tools they’re using, 
+				and what they want.
+				<a href="https://insights.stackoverflow.com/survey/2017#most-popular-technologies"> <em>Learn more </em> </a>
+			  </div>
+			</div>
 		</div>
-		<div> Desktop applications developer 28.9%  </div>
-		<div class="progress">
-			<div class="progress-bar progress-bar-primary progress-bar-striped " style="width:28.9%;color:black;"></div>
+		<div class="col-md-6 developer">
+			<div class="h3"> Developers Roles </div>
+			<div> Web developer 72.6% </div>
+			<div class="progress">
+				<div class="progress-bar progress-bar-primary progress-bar-striped " style="width:72.6%;color:black;"></div>
+			</div>
+			<div> Desktop applications developer 28.9%  </div>
+			<div class="progress">
+				<div class="progress-bar progress-bar-primary progress-bar-striped " style="width:28.9%;color:black;"></div>
+			</div>
+			<div> Mobile developer 23.0%  </div>
+			<div class="progress">
+				<div class="progress-bar progress-bar-primary progress-bar-striped " style="width:23.0%;color:black;"></div>
+			</div>
+			<div> Database administrator 14.4% </div>
+			<div class="progress">
+				<div class="progress-bar progress-bar-primary progress-bar-striped " style="width:14.4%;color:black;"> </div>
+			</div>
 		</div>
-		<div> Mobile developer 23.0%  </div>
-		<div class="progress">
-			<div class="progress-bar progress-bar-primary progress-bar-striped " style="width:23.0%;color:black;"></div>
-		</div>
-		<div> Database administrator 14.4% </div>
-		<div class="progress">
-			<div class="progress-bar progress-bar-primary progress-bar-striped " style="width:14.4%;color:black;"> </div>
-		</div>
-	</div>
-	<div class="col-md-6">
-		<div class="h3"> Programming Languages </div>
-		<div> JavaScript 62.5% </div>
-		<div class="progress">
-			<div class="progress-bar progress-bar-info progress-bar-striped " style="width:62.5%;color:black;"></div>
-		</div>
-		<div> SQL 51.2% </div>
-		<div class="progress">
-			<div class="progress-bar progress-bar-info progress-bar-striped " style="width:51.2%;color:black;"></div>
-		</div>
-		<div> Java 39.7%  </div>
-		<div class="progress">
-			<div class="progress-bar progress-bar-info progress-bar-striped " style="width:39.7%;color:black;"></div>
-		</div>
-		<div> Python 32.0% </div>
-		<div class="progress">
-			<div class="progress-bar progress-bar-info progress-bar-striped " style="width:32%;color:black;"> </div>
+		<div class="col-md-6 programmer">
+			<div class="h3"> Programming Languages </div>
+			<div> JavaScript 62.5% </div>
+			<div class="progress">
+				<div class="progress-bar progress-bar-info progress-bar-striped " style="width:62.5%;color:black;"></div>
+			</div>
+			<div> SQL 51.2% </div>
+			<div class="progress">
+				<div class="progress-bar progress-bar-info progress-bar-striped " style="width:51.2%;color:black;"></div>
+			</div>
+			<div> Java 39.7%  </div>
+			<div class="progress">
+				<div class="progress-bar progress-bar-info progress-bar-striped " style="width:39.7%;color:black;"></div>
+			</div>
+			<div> Python 32.0% </div>
+			<div class="progress">
+				<div class="progress-bar progress-bar-info progress-bar-striped " style="width:32%;color:black;"> </div>
+			</div>
 		</div>
 	</div>
 </section>
 
-<footer class="footer">
-      <div class="container">
-        <p class="text-muted">Copyright &copy 2019</p>
-      </div>
+<section class="contactus" id="contatus">
+	<div class="container-fluid">
+		<h2 class="text-uppercase"> We are eagerly waiting for you to contact us.</h2>
+		<h3 class="text-muted"> It does not matters to us if you are an indiviuals or company. You are of equal importance to us</h3>
+		<div class="col-md-6">
+			<h2 class="text-uppercase"> Call us on</h2>
+			<div class="h1 ">
+				 +91 9999999999
+			</div>
+		</div>
+		<div class="col-md-6">
+			<h2 class="text-uppercase"> Email us</h2>
+			<div class="h1">
+				Email us at <a href="mailto:jidnyasagondane@gmail.com?Subject=Hello%20again">contactus@sample.com</a>
+			</div>
+		</div>
+	</div>
+</section>
+
+<footer>
+	<img class="img-circle" src="image/letter-a.jpg" width="50" height="50">
+	<p><strong> We develp to love</strong></p>
+	<h4>Copyright &copy; 2019</h4>
 </footer>
 </body>
 
