@@ -7,9 +7,13 @@ body {
   margin: 10px;
 }
 
+.details {
+	margin-top:50px;
+}
 .details .row{
 	margin-top:20px;
-	padding-top:40px;
+	padding-top: 10px;
+	padding-bottom: 10px;
 	text-align: center;
 }
 
